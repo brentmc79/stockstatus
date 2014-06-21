@@ -4,13 +4,8 @@
     <meta charset="utf-8" />
     <title>StockStatus</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/stockstatus.js"></script>
     <script type="text/javascript">
-      function StockStatus(symbols) {
-        this.symbols = symbols;
-        this.printSymbols = function() {
-          console.log(symbols);
-        }
-      }
       $(document).on('ready', function() {
         var ss = new StockStatus(['TWTR','AAPL']);
         ss.printSymbols();
