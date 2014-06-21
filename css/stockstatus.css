@@ -7,6 +7,10 @@ body {
   width: 378px;
 }
 
+tr {
+  margin: 5px 0;
+}
+
 td {
   font-size: 64px;
 }
@@ -16,6 +20,7 @@ td span {
   display: inline-block;
   padding: 5px;
   text-align: right;
+  line-height: 70px;
 }
 
 span.green {
