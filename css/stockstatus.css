@@ -1,5 +1,17 @@
 .container {
-  background: #000;
   color: #FFF;
-  width: 300px;
+  width: 378px;
+}
+
+span {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+span.green {
+  background-color: green;
+}
+
+span.red {
+  background-color: red;
 }
