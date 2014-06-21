@@ -14,7 +14,7 @@
       $(document).on('ready', function() {
         var query = window.location.search, symbols;
 
-        $('#view').append(query);
+        $('.container').append(query);
         if (query.indexOf('?') < 0)
           symbols = ['TWTR','AAPL'];
         else
