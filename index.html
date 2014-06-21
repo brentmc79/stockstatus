@@ -14,6 +14,11 @@
       $(document).on('ready', function() {
         var ss = new StockStatus(['TWTR','AAPL']);
         ss.updateView();
+
+        $('#view').on('click', 'tr.row', function(e) {
+          e.preventDefault();
+          $(e.target).next().toggle();
+        });
         setInterval(function(){
           ss.updateView();
         }, 60000);
@@ -27,10 +32,13 @@
     </div>
   </body>
   <script id="template" type="x-tmpl-mustache">
-    <tr>
+    <tr id="{{symbol}}-{{index}}" class="row">
       <td>{{symbol}}</td>
-      <td>{{quote}}</td>
-      <td><span class="{{changeColor}}">{{change}}</span></td>
+      <td>${{quote}}</td>
+      <td><span class="pill {{changeColor}}">{{change}}</span></td>
+    </tr>
+    <tr id="{{symbol}}-{{index}}-detail" class="hidden">
+      <td colspan="3">Oh snap!</td>
     </tr>
   </script>
 </html>
