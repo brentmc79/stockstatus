@@ -4,12 +4,10 @@ body {
 
 .container {
   color: #FFF;
-  width: 500px;
 }
 
 table {
   margin: 25px;
-  width: 100%;
 }
 
 tr {
