@@ -1,6 +1,6 @@
 function StockStatus(symbols) {
   this.symbols = symbols;
-  this.url = constructUrl();
+  this.url = this.constructUrl();
 
   this.printSymbols = function() {
     console.log(symbols);
