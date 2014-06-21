@@ -31,9 +31,11 @@ td span {
 }
 
 span.green {
+  font-size: 48px;
   background-color: rgb(0,186,0);
 }
 
 span.red {
+  font-size: 48px;
   background-color: rgb(255,48,0);
 }
