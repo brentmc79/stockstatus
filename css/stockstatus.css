@@ -63,6 +63,7 @@ span.red {
 dl {
   display: inline-block;
   float: left;
+  width: 50%;
 }
 
 dt {
