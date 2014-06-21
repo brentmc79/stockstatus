@@ -60,7 +60,13 @@ span.red {
   background-color: rgb(255,48,0);
 }
 
+dl {
+  display: inline-block;
+  float: left;
+}
+
 dt {
   display: inline-block;
   float: left;
+  margin-right: 10px;
 }
