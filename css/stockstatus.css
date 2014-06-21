@@ -3,6 +3,10 @@
   width: 378px;
 }
 
+td {
+  font-size: 32px;
+}
+
 td span {
   border-radius: 5px;
   display: inline-block;
