@@ -26,6 +26,10 @@ td {
   margin-top: 15px;
 }
 
+td.last {
+  text-align: right;
+}
+
 td span {
   border-radius: 5px;
   display: inline-block;
