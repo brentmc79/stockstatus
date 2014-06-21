@@ -29,7 +29,7 @@ function StockStatus(symbols) {
           symbol: quote.Symbol,
           quote: quote.AskRealtime,
           change: quote.Change,
-          changeColor: quote.Change.charAt == '+' ? 'green' : 'red'
+          changeColor: quote.Change.charAt(0) == '+' ? 'green' : 'red'
         }
         var rendered = Mustache.render(template, viewObj);
         $('#view').append(rendered);
