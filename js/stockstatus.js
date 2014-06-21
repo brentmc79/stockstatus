@@ -27,11 +27,11 @@ function StockStatus(symbols) {
       $(quotes).each(function(index, quote) {
         viewObj = {
           symbol: quote.Symbol,
-          quote: quote.AskRealtime,
+          quote: parseFloat(quote.AskRealtime).toFixed(2),
           index: index.toString(),
-          daysHigh: quote.DaysHigh,
+          daysHigh: parseFloat(quote.DaysHigh).toFixed(2),
           daysLow: parseFloat(quote.DaysLow).toFixed(2),
-          change: quote.Change,
+          change: parseFloat(quote.Change).toFixed(2),
           changeColor: quote.Change.charAt(0) == '+' ? 'green' : 'red'
         }
         var rendered = Mustache.render(template, viewObj);
