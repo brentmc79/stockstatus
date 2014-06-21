@@ -8,6 +8,7 @@ td span {
   display: inline-block;
   width: 40px;
   padding: 5px;
+  text-align: right;
 }
 
 span.green {
