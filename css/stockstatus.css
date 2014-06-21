@@ -28,6 +28,7 @@ tr.detail {
 td {
   margin-top: 15px;
   min-width: 145px;
+  vertical-align: middle;
 }
 
 tr.row td {
