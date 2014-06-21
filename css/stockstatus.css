@@ -54,3 +54,8 @@ span.green {
 span.red {
   background-color: rgb(255,48,0);
 }
+
+dt {
+  display: inline-block;
+  float: left;
+}
