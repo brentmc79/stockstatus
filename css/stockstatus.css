@@ -3,10 +3,17 @@
   width: 378px;
 }
 
-td.green {
+td span {
+  border-radius: 5px;
+  display: inline-block;
+  width: 40px;
+  padding: 5px;
+}
+
+span.green {
   background-color: green;
 }
 
-td.red {
+span.red {
   background-color: red;
 }
