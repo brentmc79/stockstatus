@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <title>StockStatus</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//raw.githubusercontent.com/brentmc79/stockstatus/master/stockstatus.js"></script>
     <script type="text/javascript">
-      $(document).on('ready', function() {
-        var ss = new StockStatus(['TWTR','AAPL']);
-        ss.printSymbols();
+      $.getScript("//raw.githubusercontent.com/brentmc79/stockstatus/master/stockstatus.js", function () {
+        $(document).on('ready', function() {
+          var ss = new StockStatus(['TWTR','AAPL']);
+          ss.printSymbols();
+        });
       });
     </script>
   </head>
