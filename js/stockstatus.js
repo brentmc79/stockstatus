@@ -28,6 +28,7 @@ function StockStatus(symbols) {
         viewObj = {
           symbol: quote.Symbol,
           quote: quote.AskRealtime,
+          index: index.toString(),
           daysHigh: quote.DaysHigh,
           change: quote.Change,
           changeColor: quote.Change.charAt(0) == '+' ? 'green' : 'red'
