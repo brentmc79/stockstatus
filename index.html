@@ -5,11 +5,15 @@
     <title>StockStatus</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
-      $.getScript("//raw.githubusercontent.com/brentmc79/stockstatus/master/stockstatus.js", function () {
-        $(document).on('ready', function() {
-          var ss = new StockStatus(['TWTR','AAPL']);
-          ss.printSymbols();
-        });
+      function StockStatus(symbols) {
+        this.symbols = symbols;
+        this.printSymbols = function() {
+          console.log(symbols);
+        }
+      }
+      $(document).on('ready', function() {
+        var ss = new StockStatus(['TWTR','AAPL']);
+        ss.printSymbols();
       });
     </script>
   </head>
