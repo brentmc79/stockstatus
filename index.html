@@ -15,10 +15,16 @@
         var ss = new StockStatus(['TWTR','AAPL']);
         ss.updateView();
 
+        $('body').on('dblclick', function(e) {
+          e.preventDefault();
+          ss.updateView();
+        });
+
         $('#view').on('click', 'tr.row', function(e) {
           e.preventDefault();
           $(e.target).closest('tr').next().toggle();
         });
+
         setInterval(function(){
           ss.updateView();
         }, 60000);
