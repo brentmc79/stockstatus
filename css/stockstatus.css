@@ -22,6 +22,7 @@ tr.hidden {
 td {
   font-size: 64px;
   margin-top: 15px;
+  min-width: 165px;
 }
 
 td.last {
