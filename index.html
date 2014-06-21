@@ -17,7 +17,7 @@
 
         $('#view').on('click', 'tr.row', function(e) {
           e.preventDefault();
-          $(e.target).next().toggle();
+          $(e.target).closest('tr').next().toggle();
         });
         setInterval(function(){
           ss.updateView();
