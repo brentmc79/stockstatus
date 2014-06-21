@@ -12,14 +12,12 @@
     <script src="/stockstatus/js/stockstatus.js"></script>
     <script type="text/javascript">
       $(document).on('ready', function() {
-      console.log(window.location);
-        var path = window.location.pathname, symbols;
-        path = path.replace('/stockstatus','');
+        var query = window.location.search, symbols;
 
-        if (path.indexOf('?') < 0)
+        if (query.indexOf('?') < 0)
           symbols = ['TWTR','AAPL'];
         else
-          symbols = path.substring(path.indexOf('?')+1).split('+');
+          symbols = query.substring(query.indexOf('?')+1).split('+');
 
 console.log(symbols);
         var ss = new StockStatus(symbols);
