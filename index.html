@@ -22,7 +22,7 @@
 
         $('#view').on('click', 'tr.row', function(e) {
           e.preventDefault();
-          $(e.target).closest('tr').next().toggle();
+          $(e.target).closest('tr').next().toggleClass('hidden');
         });
 
         setInterval(function(){
@@ -43,8 +43,13 @@
       <td>{{quote}}</td>
       <td class="last"><span class="pill {{changeColor}}">{{change}}</span></td>
     </tr>
-    <tr id="{{symbol}}-{{index}}-detail" class="hidden">
-      <td colspan="3">Oh snap!</td>
+    <tr id="{{symbol}}-{{index}}-detail" class="detail hidden">
+      <td colspan="3">
+        <dl>
+          <dt>High</dt>
+          <dd>{{daysHigh}}</dd>
+        </dl>
+      </td>
     </tr>
   </script>
 </html>
