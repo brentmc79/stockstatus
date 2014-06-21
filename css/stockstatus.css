@@ -28,7 +28,10 @@ tr.detail {
 td {
   margin-top: 15px;
   min-width: 145px;
-  min-height: 90px;
+}
+
+tr.row td {
+  height: 80px;
 }
 
 td.last {
