@@ -9,10 +9,10 @@ body {
 table {
   margin: 25px;
   font-size: 64px;
+  border-spacing: 0 25px;
 }
 
 tr {
-  padding: 25px 0;
   border: 1px solid white;
 }
 
@@ -27,6 +27,7 @@ tr.detail {
 td {
   margin-top: 15px;
   min-width: 145px;
+  min-height: 80px;
 }
 
 td.last {
