@@ -12,23 +12,13 @@
     <script type="text/javascript">
       $(document).on('ready', function() {
         var ss = new StockStatus(['TWTR','AAPL']);
-        ss.fetchInfo();
+        ss.updateView();
       });
     </script>
   </head>
   <body>
     <div class="container">
       <table id="view">
-        <tr>
-          <td>TWTR</td>
-          <td>39.24</td>
-          <td><span class="green">0.34</span></td>
-        </tr>
-        <tr>
-          <td>AAPL</td>
-          <td>90.91</td>
-          <td><span class="red">0.95</span></td>
-        </tr>
       </table>
     </div>
   </body>
