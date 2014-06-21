@@ -26,6 +26,7 @@ function StockStatus(symbols) {
       var viewObj = null;
       $(quotes).each(function(index, quote) {
         console.log(Number.parseFloat(quote.DaysLow).toString())
+        console.log(Number.parseFloat(quote.DaysLow).toFixed(2).toString())
         viewObj = {
           symbol: quote.Symbol,
           quote: quote.AskRealtime,
