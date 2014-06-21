@@ -8,7 +8,6 @@ function StockStatus(symbols) {
 
   this.fetchInfo = function(callback) {
     $.getJSON(this.url(), function(data) {
-      console.log(data);
       callback(data.query.results.quote);
     });
   }
@@ -19,20 +18,19 @@ function StockStatus(symbols) {
   }
 
   this.updateView = function() {
-    var template = $("#template");
+    console.log("Updating view...");
+    var template = $("#template").html();
     var view = $("#view");
     this.fetchInfo(function(quotes) {
       view.html("");
       var viewObj = null;
       $(quotes).each(function(index, quote) {
-        console.log(quote);
         viewObj = {
           symbol: quote.Symbol,
           quote: quote.AskRealtime,
           change: quote.Change,
           changeColor: quote.Change.charAt == '+' ? 'green' : 'red'
         }
-        console.log(viewObj);
         var rendered = Mustache.render(template, viewObj);
         $('#view').append(rendered);
       });
