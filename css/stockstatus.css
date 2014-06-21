@@ -3,15 +3,10 @@
   width: 378px;
 }
 
-span {
-  padding: 5px 10px;
-  margin: 0 10px;
-}
-
-span.green {
+td.green {
   background-color: green;
 }
 
-span.red {
+td.red {
   background-color: red;
 }
