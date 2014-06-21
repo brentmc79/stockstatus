@@ -19,7 +19,6 @@
         else
           symbols = query.substring(query.indexOf('?')+1).split('+');
 
-console.log(symbols);
         var ss = new StockStatus(symbols);
         ss.updateView();
 
