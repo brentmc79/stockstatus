@@ -23,6 +23,7 @@ function StockStatus(symbols) {
     var view = $("#view");
     this.fetchInfo(function(quotes) {
       view.html("");
+      var viewObj = null;
       $(quotes).each(function(index, quote) {
         console.log(quote);
         viewObj = {
@@ -36,4 +37,5 @@ function StockStatus(symbols) {
         $('#view').append(rendered);
       });
     });
+  }
 }
