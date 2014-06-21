@@ -12,7 +12,17 @@
     <script src="/stockstatus/js/stockstatus.js"></script>
     <script type="text/javascript">
       $(document).on('ready', function() {
-        var ss = new StockStatus(['TWTR','AAPL']);
+      console.log(window.location);
+        var path = window.location.pathname, symbols;
+        path = path.replace('/stockstatus','');
+
+        if (path == '/')
+          symbols = ['TWTR','AAPL'];
+        else
+          symbols = path.split('+');
+
+console.log(symbols);
+        var ss = new StockStatus(symbols);
         ss.updateView();
 
         $('body').on('dblclick', function(e) {
