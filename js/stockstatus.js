@@ -25,14 +25,12 @@ function StockStatus(symbols) {
       view.html("");
       var viewObj = null;
       $(quotes).each(function(index, quote) {
-        console.log(Number.parseFloat(quote.DaysLow).toString())
-        console.log(Number.parseFloat(quote.DaysLow).toFixed(2).toString())
         viewObj = {
           symbol: quote.Symbol,
           quote: quote.AskRealtime,
           index: index.toString(),
           daysHigh: quote.DaysHigh,
-          daysLow: '12.34', //Number.parseFloat(quote.DaysLow).toFixed(2).toString(),
+          daysLow: Number.parseFloat(quote.DaysLow).toFixed(2).toString(),
           change: quote.Change,
           changeColor: quote.Change.charAt(0) == '+' ? 'green' : 'red'
         }
