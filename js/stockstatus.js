@@ -30,7 +30,7 @@ function StockStatus(symbols) {
           quote: quote.AskRealtime,
           index: index.toString(),
           daysHigh: quote.DaysHigh,
-          daysLow: Number.parseFloat(quote.DaysLow).toFixed(2).toString(),
+          daysLow: '12.34', //Number.parseFloat(quote.DaysLow).toFixed(2).toString(),
           change: quote.Change,
           changeColor: quote.Change.charAt(0) == '+' ? 'green' : 'red'
         }
